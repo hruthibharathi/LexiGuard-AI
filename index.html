@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="LexiGuard AI — a static legal document review demo." />
+  <title>LexiGuard AI | Legal Workspace</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#dashboard" aria-label="LexiGuard AI home">
+        <span class="brand-mark">L<span>G</span></span>
+        <span class="brand-copy"><strong>LexiGuard</strong><small>LEGAL INTELLIGENCE</small></span>
+      </a>
+      <div class="workspace-label">WORKSPACE</div>
+      <nav class="nav-list" aria-label="Main navigation">
+        <button class="nav-item active" data-view="dashboard"><span class="nav-icon">▦</span> Overview</button>
+        <button class="nav-item" data-view="analyzer"><span class="nav-icon">⌕</span> Contract analyzer <span class="nav-count">1</span></button>
+        <button class="nav-item" data-view="risks"><span class="nav-icon">◈</span> Risk dashboard</button>
+        <button class="nav-item" data-view="assistant"><span class="nav-icon">✳</span> Legal assistant</button>
+        <button class="nav-item" data-view="templates"><span class="nav-icon">▤</span> Document studio</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="privacy-card"><span class="privacy-icon">⌑</span><strong>Private by design</strong><p>This demo runs in your browser. No document is uploaded to a server.</p><span class="privacy-status"><i></i> Local demo mode</span></div>
+        <button class="profile-row" type="button"><span class="avatar">LG</span><span><strong>Legal Workspace</strong><small>Demo account</small></span><span class="profile-dots">•••</span></button>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobileMenu" aria-label="Open navigation">☰</button>
+        <div class="breadcrumb">Workspace <span>/</span> <strong id="breadcrumbCurrent">Overview</strong></div>
+        <div class="topbar-actions"><span class="demo-pill"><i></i> DEMO ENVIRONMENT</span><button class="icon-button" id="helpButton" aria-label="Show demo information">?</button><span class="top-avatar">LG</span></div>
+      </header>
+
+      <div class="content-wrap">
+        <section class="view active" id="view-dashboard">
+          <div class="page-heading heading-row"><div><p class="eyebrow">MONDAY, OCTOBER 09, 2026</p><h1>Your legal workspace</h1><p class="subheading">A clearer view of your documents, clauses, and potential risks.</p></div><button class="button button-primary" data-go="analyzer"><span>＋</span> Analyze a contract</button></div>
+          <div class="hero-banner"><div class="hero-copy"><span class="hero-kicker">LEGAL REVIEW, SIMPLIFIED</span><h2>Make every clause<br>count.</h2><p>Explore contract language, spot demo risk signals, and prepare a clearer first draft — all in one workspace.</p><button class="button button-light" data-go="analyzer">Start a review <span>↗</span></button></div><div class="hero-art" aria-hidden="true"><div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div><div class="art-document"><div class="doc-top"><span></span><span></span><span></span></div><div class="doc-emblem">§</div><div class="doc-line wide"></div><div class="doc-line"></div><div class="doc-line short"></div><div class="doc-highlight"></div><div class="doc-line wide"></div><div class="doc-line"></div><div class="doc-signature">LexiGuard</div></div><div class="floating-check">✓</div><div class="floating-tag">Clause clarity <strong>+42%</strong></div></div></div>
+          <div class="section-title-row"><div><h2>Workspace snapshot</h2><p>Sample metrics from this demo session</p></div><span class="muted-label">UPDATED JUST NOW</span></div>
+          <div class="stats-grid">
+            <article class="stat-card"><div class="stat-top"><span>Documents reviewed</span><span class="stat-icon blue">▤</span></div><div class="stat-value" id="statReviewed">12</div><div class="stat-foot"><span class="trend">↗ 3 this week</span><span class="muted">demo data</span></div></article>
+            <article class="stat-card"><div class="stat-top"><span>Flagged clauses</span><span class="stat-icon amber">⚑</span></div><div class="stat-value" id="statFlagged">08</div><div class="stat-foot"><span class="trend amber-text">Needs attention</span><span class="muted">sample findings</span></div></article>
+            <article class="stat-card"><div class="stat-top"><span>High-risk signals</span><span class="stat-icon red">⌁</span></div><div class="stat-value" id="statHigh">02</div><div class="stat-foot"><span class="trend red-text">Review carefully</span><span class="muted">rule-based demo</span></div></article>
+            <article class="stat-card"><div class="stat-top"><span>Templates available</span><span class="stat-icon green">▧</span></div><div class="stat-value">04</div><div class="stat-foot"><span class="trend green-text">Ready to customize</span><span class="muted">starter templates</span></div></article>
+          </div>
+          <div class="dashboard-columns">
+            <article class="panel recent-panel"><div class="panel-heading"><div><h3>Recent activity</h3><p>Your latest workspace actions</p></div><button class="text-button" data-go="risks">View risk dashboard ↗</button></div><div class="activity-list" id="activityList"><div class="activity-item"><span class="activity-file">▤</span><div class="activity-copy"><strong>Sample Service Agreement</strong><small>Contract analysis demo · Today</small></div><span class="risk-badge risk-high">High risk</span></div><div class="activity-item"><span class="activity-file">▤</span><div class="activity-copy"><strong>Mutual NDA template</strong><small>Opened in Document Studio · Yesterday</small></div><span class="risk-badge risk-low">Template</span></div><div class="activity-item"><span class="activity-file">✳</span><div class="activity-copy"><strong>Termination clause question</strong><small>Legal assistant · Yesterday</small></div><span class="risk-badge risk-medium">Answered</span></div></div></article>
+            <article class="panel quick-panel"><div class="panel-heading"><div><h3>Quick actions</h3><p>Pick up where you need to</p></div></div><button class="quick-action" data-go="analyzer"><span class="quick-icon blue">⌕</span><span><strong>Review a contract</strong><small>Check text for demo risk signals</small></span><b>→</b></button><button class="quick-action" data-go="assistant"><span class="quick-icon purple">✳</span><span><strong>Ask the legal assistant</strong><small>Explore common legal concepts</small></span><b>→</b></button><button class="quick-action" data-go="templates"><span class="quick-icon green">▤</span><span><strong>Draft a document</strong><small>Start from a reusable template</small></span><b>→</b></button></article>
+          </div>
+          <div class="disclaimer-strip"><span>ⓘ</span><p><strong>Prototype notice:</strong> LexiGuard uses illustrative, rule-based examples. It is not a lawyer, does not verify legal compliance, and should not replace professional advice.</p></div>
+        </section>
+
+        <section class="view" id="view-analyzer">
+          <div class="page-heading"><p class="eyebrow">DOCUMENT INTELLIGENCE</p><h1>Contract analyzer</h1><p class="subheading">Paste or upload plain text to explore potential clause-level risk signals.</p></div>
+          <div class="analyzer-layout"><article class="panel analyzer-input-panel"><div class="panel-heading"><div><h3>Contract content</h3><p>Text stays in this browser session.</p></div><span class="local-tag">LOCAL ONLY</span></div><div class="form-row"><label for="contractName">Document name</label><input id="contractName" type="text" value="Sample Service Agreement" maxlength="100" /></div><div class="editor-toolbar"><span class="editor-label">DOCUMENT TEXT</span><div><label class="button button-outline button-small upload-label" for="textFile">↑ Upload .txt</label><input id="textFile" type="file" accept=".txt,text/plain" hidden /><button class="text-button" id="loadSample">Load sample</button></div></div><textarea id="contractText" class="contract-editor" spellcheck="false" aria-label="Contract text">SERVICE AGREEMENT
+
+1. PAYMENT. The Client shall pay all invoices within 30 days of receipt. Late payments may incur a reasonable fee as stated in the invoice.
+
+2. TERMINATION. The Provider may terminate this agreement at any time for any reason without prior notice. The Client must provide 90 days written notice before termination.
+
+3. LIABILITY. The Provider shall not be liable for any direct, indirect, incidental, special, or consequential damages under any circumstances. The Client accepts all risks associated with the services.
+
+4. CONFIDENTIALITY. Each party agrees to protect confidential information and use it only for the purpose of this agreement.
+
+5. DISPUTES. Any dispute shall be resolved in the Provider's home jurisdiction. The parties waive all rights to appeal.
+
+6. CHANGES. The Provider may change the scope, fees, or terms of this agreement at any time without notifying the Client.</textarea><div class="editor-footer"><span id="charCount">0 characters</span><span>Demo supports plain text only</span></div><button class="button button-primary button-full" id="analyzeButton"><span>✳</span> Analyze contract <span class="button-arrow">→</span></button><p class="tiny-note">Demo checks common wording patterns. It does not determine enforceability or provide legal advice.</p></article>
+          <article class="panel analysis-preview"><div class="panel-heading"><div><h3>Analysis preview</h3><p id="analysisStatus">Ready when you are</p></div><span class="preview-symbol">✳</span></div><div id="emptyAnalysis" class="empty-state"><div class="empty-illustration">⌕</div><h3>Your findings will appear here</h3><p>Run the demo analysis to see flagged language, risk categories, and suggested questions for review.</p><button class="button button-outline" id="analyzeEmpty">Analyze sample text</button></div><div id="analysisResults" class="analysis-results hidden"><div class="overall-risk"><div><span class="mini-label">DEMO RISK INDICATOR</span><h2 id="overallRiskLabel">Needs review</h2><p id="riskSummary">Potential concerns found in the text.</p></div><div class="risk-score" id="riskScore">72<span>/100</span></div></div><div class="risk-meter"><span id="riskMeterFill"></span></div><div class="finding-summary" id="findingSummary"></div><div id="findingsList" class="findings-list"></div><button class="button button-outline button-full" id="openRiskDashboard">Open full risk dashboard ↗</button></div></article></div>
+        </section>
+
+        <section class="view" id="view-risks">
+          <div class="page-heading heading-row"><div><p class="eyebrow">REVIEW & PRIORITIZE</p><h1>Risk dashboard</h1><p class="subheading">A structured view of sample findings from your most recent analysis.</p></div><button class="button button-primary" data-go="analyzer">＋ New analysis</button></div>
+          <div class="risk-overview-grid"><article class="panel risk-score-panel"><div><span class="mini-label">CURRENT DEMO DOCUMENT</span><h3 id="riskDocumentName">Sample Service Agreement</h3><p id="riskDocumentMeta">Rule-based example findings · Not a legal opinion</p></div><div class="score-display"><div class="score-ring" id="scoreRing"><div><strong id="dashboardScore">72</strong><small>/100</small></div></div><div><span class="risk-badge risk-high" id="dashboardRiskBadge">High attention</span><p class="score-caption" id="dashboardScoreCaption">Several clauses may deserve closer review.</p></div></div><div class="score-legend"><span><i class="legend-dot dot-high"></i> High attention</span><span><i class="legend-dot dot-medium"></i> Review</span><span><i class="legend-dot dot-low"></i> Informational</span></div></article><article class="panel category-panel"><div class="panel-heading"><div><h3>Findings by category</h3><p>Based on demo pattern matches</p></div></div><div id="categoryBars" class="category-bars"><p class="muted">Run an analysis to populate category data.</p></div></article></div>
+          <article class="panel all-findings-panel"><div class="panel-heading"><div><h3>Clause findings</h3><p id="riskFindingCount">Sample results are shown until you analyze a contract.</p></div><select id="riskFilter" class="filter-select" aria-label="Filter findings"><option value="all">All findings</option><option value="high">High attention</option><option value="medium">Review</option><option value="low">Informational</option></select></div><div id="dashboardFindings" class="dashboard-findings"><div class="empty-inline">No analysis yet. Open Contract Analyzer and run the demo.</div></div></article>
+          <div class="disclaimer-strip"><span>ⓘ</span><p>Risk levels are illustrative signals generated by simple keyword rules. Context, jurisdiction, and the complete agreement matter; a matched phrase is not proof that a clause is unlawful or unfair.</p></div>
+        </section>
+
+        <section class="view" id="view-assistant">
+          <div class="page-heading"><p class="eyebrow">LEGAL CONCEPT EXPLORER</p><h1>Legal assistant</h1><p class="subheading">Ask general questions and explore plain-language explanations in this offline-style demo.</p></div>
+          <div class="chat-layout"><aside class="panel chat-topics"><h3>Suggested topics</h3><p>Choose a prompt to get started.</p><button class="topic-chip" data-prompt="What is an indemnity clause?">What is an indemnity clause?</button><button class="topic-chip" data-prompt="What should a termination clause cover?">Termination clauses</button><button class="topic-chip" data-prompt="Explain limitation of liability in simple terms.">Limitation of liability</button><button class="topic-chip" data-prompt="What is the purpose of an NDA?">Non-disclosure agreements</button><div class="chat-notice"><strong>Demo assistant</strong><p>Answers come from a small built-in reference set, not a live AI model or legal database.</p></div></aside><article class="panel chat-panel"><div class="chat-header"><div class="chat-avatar">✳</div><div><h3>LexiGuard Assistant</h3><p><span class="online-dot"></span> Demo knowledge base · General information</p></div><button class="text-button" id="clearChat">Clear chat</button></div><div id="chatMessages" class="chat-messages" aria-live="polite"><div class="message assistant-message"><div class="message-avatar">LG</div><div class="message-body"><span class="message-author">LexiGuard <small>DEMO</small></span><div class="message-bubble">Hi! I can explain common contract concepts in plain language. What would you like to understand today?<br><br><span class="answer-caveat">I provide general educational information, not legal advice.</span></div></div></div></div><form id="chatForm" class="chat-compose"><input id="chatInput" type="text" placeholder="Ask about a contract concept…" maxlength="500" autocomplete="off" aria-label="Ask a legal concept question" /><button class="send-button" type="submit" aria-label="Send message">↑</button></form><p class="chat-footer-note">Avoid entering names, confidential information, or sensitive personal data.</p></article></div>
+        </section>
+
+        <section class="view" id="view-templates">
+          <div class="page-heading"><p class="eyebrow">DOCUMENT STUDIO</p><h1>Template generator</h1><p class="subheading">Create an editable starter document from a basic template.</p></div>
+          <div class="template-layout"><article class="panel template-picker"><div class="panel-heading"><div><h3>Choose a template</h3><p>Select a starting point and customize the fields.</p></div></div><button class="template-option selected" data-template="nda"><span class="template-icon violet">▤</span><span><strong>Mutual NDA</strong><small>Confidential information shared by both parties</small><em>NON-DISCLOSURE</em></span><span class="template-radio">●</span></button><button class="template-option" data-template="service"><span class="template-icon blue">▧</span><span><strong>Service agreement</strong><small>Starter outline for a services relationship</small><em>PROFESSIONAL SERVICES</em></span><span class="template-radio">○</span></button><div class="template-warning"><span>ⓘ</span><p>Templates are illustrative starting points, not jurisdiction-specific legal forms. Have the final document reviewed before use.</p></div></article><article class="panel template-editor-panel"><div class="panel-heading"><div><h3>Customize document</h3><p>Fill in the details to generate your draft.</p></div><span class="local-tag">EDITABLE</span></div><form id="templateForm" class="template-form"><div class="form-row"><label for="partyOne">First party / disclosing party</label><input id="partyOne" type="text" placeholder="e.g. Acme Technologies Pvt. Ltd." maxlength="120" /></div><div class="form-row"><label for="partyTwo">Second party / receiving party</label><input id="partyTwo" type="text" placeholder="e.g. Example Consulting" maxlength="120" /></div><div class="form-row two-fields"><div><label for="effectiveDate">Effective date</label><input id="effectiveDate" type="date" /></div><div><label for="duration">Duration / term</label><input id="duration" type="text" placeholder="e.g. 2 years" maxlength="80" /></div></div><div class="form-row"><label for="purpose">Purpose / scope</label><textarea id="purpose" rows="3" maxlength="500" placeholder="Briefly describe the purpose of this agreement"></textarea></div><button class="button button-primary button-full" type="submit">Generate document <span>→</span></button></form><div id="generatedWrap" class="generated-wrap hidden"><div class="generated-header"><strong>Draft generated</strong><div><button class="button button-outline button-small" id="editDraft">Edit fields</button><button class="button button-primary button-small" id="downloadDraft">↓ Download .txt</button></div></div><textarea id="generatedDocument" class="generated-document" aria-label="Generated editable document"></textarea><p class="tiny-note">The generated text is editable. Review all terms and obtain legal advice before use.</p></div></article></div>
+        </section>
+
+        <footer class="app-footer"><span>© 2026 LexiGuard AI · Static prototype</span><span><span class="footer-dot"></span> Local demo mode <span class="footer-divider">·</span> No backend connected</span></footer>
+      </div>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <dialog id="helpDialog" class="help-dialog"><div class="dialog-head"><div><span class="eyebrow">ABOUT THIS PROTOTYPE</span><h2>Designed for a safe demo</h2></div><button id="closeHelp" class="icon-button" aria-label="Close">×</button></div><p>LexiGuard AI is a static front-end prototype. Contract analysis uses simple phrase matching, and the assistant uses predefined educational responses. No information is transmitted to a backend.</p><ul><li>Do not treat the risk score as a legal assessment.</li><li>Do not enter confidential or sensitive information.</li><li>Have a qualified lawyer review real contracts.</li></ul><button class="button button-primary button-full" id="ackHelp">Got it</button></dialog>
+  <script src="script.js"></script>
+</body>
+</html>
